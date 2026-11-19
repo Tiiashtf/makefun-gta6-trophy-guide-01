@@ -1,0 +1,124 @@
+/* Leonida Legend — an original Vice City sunset-neon look: deep violet nights,
+   magenta sunsets, teal water. No Rockstar artwork, no logos — just colour and type. */
+:root {
+  --ink: #f4eef7;
+  --ink-dim: #c9b8d4;
+  --bg: #150a24;
+  --panel: #221239;
+  --panel-2: #2c1748;
+  --line: #4a2d6e;
+  --pink: #ff5da2;
+  --orange: #ffb347;
+  --teal: #39d5c0;
+  --gold: #ffd75e;
+  --silver: #cfd6e4;
+  --bronze: #e0a06a;
+  --platinum: #bfefff;
+  --danger: #ff6b6b;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+}
+a { color: var(--teal); }
+a:visited { color: #8fe8d8; }
+
+/* Hero */
+.hero {
+  padding: 22px 28px 20px;
+  background: linear-gradient(160deg, #3b115f 0%, #8a1e63 48%, #e2603f 78%, #ffb347 100%);
+  border-bottom: 4px solid var(--orange);
+}
+.eyebrow { margin: 0 0 6px; letter-spacing: .14em; text-transform: uppercase; font-size: 13px; color: #ffe9f4; }
+.hero h1 { margin: 0 0 6px; font-size: 38px; line-height: 1.05; letter-spacing: .01em; }
+.tagline { margin: 0 0 12px; max-width: 880px; font-size: 17px; color: #fff3e2; }
+.progress-wrap { max-width: 880px; }
+.progress-line { display: flex; justify-content: space-between; font-size: 19px; }
+.progress-bar { height: 16px; margin-top: 6px; background: rgba(0, 0, 0, .35); border-radius: 999px; overflow: hidden; }
+.progress-bar > div { height: 100%; width: 0; background: linear-gradient(90deg, var(--teal), var(--gold)); transition: width .3s ease; }
+.grade-counts { margin: 8px 0 0; font-size: 15px; color: #ffe9f4; }
+
+main { max-width: 1180px; margin: 0 auto; padding: 0 22px 30px; }
+section { margin-top: 26px; }
+h2 { font-size: 25px; margin: 0 0 10px; color: var(--orange); }
+
+/* Alert strip */
+.alert-strip { background: #3a1522; border: 1px solid var(--danger); border-left: 6px solid var(--danger); border-radius: 10px; padding: 12px 16px; margin: 22px 0 0; font-size: 16px; }
+.alert-strip strong { color: #ffb3b3; }
+
+/* Warnings */
+.warnings { background: var(--panel); border: 1px solid var(--line); border-left: 6px solid var(--danger); border-radius: 10px; padding: 16px 20px; }
+.warnings ul { margin: 0; padding-left: 20px; }
+.warnings li { margin: 5px 0; }
+.warnings strong { color: #ffb3b3; }
+
+/* Roadmap */
+.roadmap-steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; counter-reset: step; }
+.roadmap-steps li { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 14px 12px; }
+.roadmap-steps li::before { counter-increment: step; content: "Step " counter(step); display: block; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--teal); margin-bottom: 4px; }
+.roadmap-steps h3 { margin: 0 0 6px; font-size: 19px; }
+.roadmap-steps p { margin: 0 0 6px; font-size: 15px; color: var(--ink-dim); }
+.roadmap-steps .step-trophies { font-size: 14px; color: var(--gold); }
+.roadmap-note { font-size: 14px; color: var(--ink-dim); }
+.roadmap-intro { font-size: 17px; }
+
+/* Controls */
+.controls { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+.control-row { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin: 6px 0; }
+.control-row input[type="search"] { width: 300px; max-width: 100%; }
+input[type="search"], select { background: #150a24; color: var(--ink); border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; font-size: 16px; }
+button { background: var(--pink); color: #fff; border: none; border-radius: 6px; padding: 9px 14px; font-size: 16px; cursor: pointer; }
+button:hover { background: #ff7ab3; }
+button.secondary { background: var(--panel-2); border: 1px solid var(--line); color: var(--ink); }
+.kind-filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+.kind-filters button { background: var(--panel-2); border: 1px solid var(--line); color: var(--ink); padding: 7px 12px; font-size: 15px; }
+.kind-filters button[aria-pressed="true"] { background: var(--teal); color: #10231f; border-color: var(--teal); font-weight: 700; }
+.check-label { font-size: 16px; display: inline-flex; gap: 6px; align-items: center; }
+.import-label { font-size: 16px; }
+.import-label input { font-size: 13px; }
+.showing { margin-left: auto; font-size: 15px; color: var(--ink-dim); }
+
+/* Trophy cards */
+.list { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+.card.earned { border-color: var(--teal); background: #1d2f33; }
+.card-head { display: flex; gap: 10px; align-items: flex-start; }
+.card-head input[type="checkbox"] { width: 24px; height: 24px; margin-top: 2px; accent-color: var(--teal); flex: none; cursor: pointer; }
+.card-title { flex: 1; min-width: 0; }
+.card-title h3 { margin: 0; font-size: 20px; line-height: 1.25; }
+.card-title .official { margin: 2px 0 0; font-size: 15px; color: var(--ink-dim); font-style: italic; }
+.badge { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; border-radius: 999px; padding: 3px 9px; white-space: nowrap; }
+.badge.platinum { background: var(--platinum); color: #0b2b33; }
+.badge.gold { background: var(--gold); color: #3a2a00; }
+.badge.silver { background: var(--silver); color: #22293a; }
+.badge.bronze { background: var(--bronze); color: #3a1f00; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.tag { font-size: 13px; border: 1px solid var(--line); border-radius: 999px; padding: 2px 9px; color: var(--ink-dim); }
+.tag.missable { border-color: var(--danger); color: #ffb3b3; font-weight: 700; }
+.tag.hidden-flag { border-color: var(--gold); color: var(--gold); }
+.guide-toggle { margin-top: 10px; }
+.guide { margin-top: 10px; border-top: 1px solid var(--line); padding-top: 10px; font-size: 16px; }
+.guide p { margin: 0 0 8px; }
+.guide .sources { font-size: 14px; color: var(--ink-dim); }
+.guide .sources a { overflow-wrap: anywhere; }
+.missable-note { color: #ffb3b3; font-weight: 700; }
+.spoiler-masked { color: var(--ink-dim); font-style: italic; }
+.empty { font-size: 18px; color: var(--ink-dim); }
+
+/* Missable board + footer */
+.missable-board { background: var(--panel); border: 1px solid var(--danger); border-radius: 10px; padding: 16px 20px; }
+.missable-board p { margin: 0; }
+footer { max-width: 1180px; margin: 0 auto; padding: 0 22px 40px; font-size: 15px; color: var(--ink-dim); }
+footer h2 { font-size: 20px; }
+.fineprint { font-size: 14px; }
+
+@media (max-width: 860px) {
+  .list { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 34px; }
+  .control-row input[type="search"] { width: 100%; }
+}

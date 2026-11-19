@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%233b115f'/%3E%3Ccircle cx='16' cy='14' r='8' fill='%23ffb347'/%3E%3Crect y='22' width='32' height='10' fill='%2339d5c0'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies</p>
+  <h1>Leonida Legend</h1>
+  <p class="tagline">The complete GTA VI trophy guide and tracker — every trophy, its official name and grade, a guide in our own words with its sources, a roadmap to the platinum, and a checklist that remembers your progress. Fully offline: no network, no account, no ads.</p>
+  <div class="progress-wrap" aria-label="Overall progress">
+    <div class="progress-line"><strong id="progressText">0 of 55 earned</strong><span id="progressPct">0%</span></div>
+    <div class="progress-bar"><div id="progressFill"></div></div>
+    <p class="grade-counts" id="gradeCounts"></p>
+  </div>
+</header>
+
+<main>
+  <p class="alert-strip"><strong>⚠ One trophy can be missed:</strong> <em>Positive Mental Attitude</em> may need Lucia&rsquo;s balcony meditation in Chapter 1 — do it the morning after Down to Earth. <strong>No mission replay:</strong> keep a manual save at the start of every chapter. <strong>Cheats switch trophies off.</strong></p>
+
+  <section class="controls" aria-label="Find and filter trophies">
+    <div class="control-row">
+      <label class="search-label">Search <input id="search" type="search" placeholder="Trophy name or word…" autocomplete="off"></label>
+      <label class="grade-label">Grade
+        <select id="grade">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="check-label"><input id="hideEarned" type="checkbox"> Hide earned</label>
+      <label class="check-label spoiler-label"><input id="spoilers" type="checkbox" checked> Hide story spoilers</label>
+    </div>
+    <div class="kind-filters" id="kindFilters" role="group" aria-label="Filter by kind"></div>
+    <div class="control-row">
+      <button id="export" type="button">Export progress</button>
+      <label class="import-label">Import progress <input id="import" type="file" accept="application/json,.json"></label>
+      <button id="reset" type="button">Reset progress</button>
+      <span class="showing" id="showing"></span>
+    </div>
+  </section>
+
+  <section class="list" id="trophyList" aria-label="Trophy checklist"></section>
+  <p class="empty" id="emptyNote" hidden>No trophies match these filters. Clear the search or pick another kind.</p>
+
+  <section class="warnings" aria-label="Before you start">
+    <h2>Before you start</h2>
+    <ul>
+      <li><strong>One trophy can be missed.</strong> <em>Positive Mental Attitude</em> may need Lucia&rsquo;s balcony meditation in Chapter 1 — do it the morning after Down to Earth. It is the only trophy any guide flags as possibly missable.</li>
+      <li><strong>No mission replay, no New Game Plus.</strong> Keep a manual save at the start of every chapter and one before the final mission.</li>
+      <li><strong>Cheats switch trophies off.</strong> Keep cheats off for the whole run — they disable trophies and saving.</li>
+      <li><strong>All 55 are single-player.</strong> There are no online trophies and no difficulty trophies. Around 200 hours to the platinum.</li>
+    </ul>
+  </section>
+
+  <section class="roadmap" id="roadmap" aria-label="Roadmap to the platinum">
+    <h2>Roadmap to the platinum</h2>
+    <p class="roadmap-intro">Five steps, in order. Story first, then the character strands, then activities and collectibles, then post-story clean-up, then 100% completion — and the platinum pops.</p>
+    <ol class="roadmap-steps" id="roadmapSteps"></ol>
+    <p class="roadmap-note">Built from the official trophy descriptions. Step counts and chapter names come from <a href="https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series" target="_blank" rel="noopener">GTABase&rsquo;s GTA 6 Trophy Guide</a> and <a href="https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/" target="_blank" rel="noopener">KeenGamer&rsquo;s Platinum Roadmap</a>.</p>
+  </section>
+
+  <section class="missable-board" aria-label="Missable trophies">
+    <h2>Missable trophies</h2>
+    <p id="missableText">Loading…</p>
+  </section>
+</main>
+
+<footer>
+  <h2>Sources</h2>
+  <p>Official names, descriptions and grades are as PlayStation publishes them, taken from <a href="https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/" target="_blank" rel="noopener">Exophase — Grand Theft Auto VI Trophies (PS5)</a> and cross-checked with PSNProfiles. Unlock detail in each guide is paraphrased in our own words from <a href="https://www.gtabase.com/articles/gta-6/gta-6-achievements-trophies-list-ps5-xbox-series" target="_blank" rel="noopener">GTABase</a>, <a href="https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/" target="_blank" rel="noopener">KeenGamer</a>, <a href="https://outputlag.com/guides/gta-6-trophy-list/" target="_blank" rel="noopener">OutputLag</a> and <a href="https://www.planetgta6.com/en/gta-6-trophies/" target="_blank" rel="noopener">PlanetGTA6</a>; every trophy names its sources beside its guide. Five trophies (In The Beginning…, Capital Offense, Bad Luck, I Guess, The Truth Is Out There, Ten Pin) have no confirmed unlock steps yet — their guides say so honestly instead of guessing.</p>
+  <p class="fineprint">An unofficial fan guide. Not affiliated with Rockstar Games or Sony. No Rockstar logo or official artwork is used. Works offline: every file this page loads sits in this folder, and progress is stored only in your browser.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
